@@ -1,0 +1,18 @@
+{
+  "id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM0ODU1MjNiN... (token ID JWT largo)",
+  "access_token": "ya29.A0ARrdaM... (token de acceso)",
+  "scope": "email profile openid",
+  "token_type": "Bearer",
+  "expires_in": 3599,
+  "refresh_token": "1//04i3x... (token de refresco)",
+  "user": {
+    "id": "12345678901234567890",
+    "email": "usuario@ejemplo.com",
+    "verified_email": true,
+    "name": "Nombre Apellido",
+    "given_name": "Nombre",
+    "family_name": "Apellido",
+    "picture": "https://lh3.googleusercontent.com/a-/AOh14Gi... (URL de la foto de perfil)",
+    "locale": "es"
+  }
+}
