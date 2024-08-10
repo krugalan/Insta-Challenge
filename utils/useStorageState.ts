@@ -34,7 +34,8 @@ export async function setStorageItemAsync(key: string, value: string | null) {
 }
 
 export function useStorageState(key: string): UseStateHook<string> {
-    const [state, setState] = useAsyncState<string>();
+    // TODO: Replace by correct logic of authentication
+    const [state, setState] = useAsyncState<any>();
 
     React.useEffect(() => {
         if (Platform.OS === 'web') {

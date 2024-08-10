@@ -2,6 +2,7 @@ import { useSession } from '@/utils/ctx';
 import { ThemedView } from '@/components/ThemedView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedLink } from '@/components/ThemedLink';
+import { useEffect } from 'react';
 
 // TODO: Implement feature and components related to SignIn
 /**
@@ -9,6 +10,11 @@ import { ThemedLink } from '@/components/ThemedLink';
  */
 export default function SignIn() {
     const { signIn } = useSession();
+
+    useEffect(() => {
+        signIn()
+    }, [])
+
     return (
         <ThemedView style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <ThemedText onPress={signIn}>
