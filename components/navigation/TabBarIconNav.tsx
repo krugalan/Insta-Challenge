@@ -23,7 +23,9 @@ export type TabBarIconProps = IconFamilyProps & {
   darkColor?: string;
 };
 
-export function TabBarIcon({ family, name, color, style, size = 28, lightColor, darkColor, }: TabBarIconProps) {
+const DEFAULT_SIZE_ICON = 28;
+
+export function TabBarIcon({ family, name, color, style, size = DEFAULT_SIZE_ICON }: TabBarIconProps) {
 
   const IconComponent =
     family === 'Ionicons' ? Ionicons
