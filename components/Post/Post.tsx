@@ -12,7 +12,7 @@ interface PostProps {
 }
 
 export const Post: React.FC<PostProps> = ({ post }) => {
-    const { name, avatar, location, image, likes, liked, comments, saved, description } = post;
+    const { name, avatar, location, image, liked, likes, comments, saved, description } = post;
     const headerPostData = { name, avatar, location };
 
     return (
