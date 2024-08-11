@@ -1,12 +1,10 @@
-export type PostType = HeaderPostType & {
+export type PostType = HeaderPostType & ActionsPostType & {
+    id: string;
     createdAt: string;
     description: string;
-    likes: number;
     image: string;
     comments: number;
-    liked: boolean;
-    saved: boolean;
-    id: string;
+    likes: number;
 }
 
 export type HeaderPostType = {
@@ -15,5 +13,10 @@ export type HeaderPostType = {
     location: string;
 }
 
+export type ActionsPostType = {
+    liked: boolean;
+    saved: boolean;
+
+}
 
 export type PostResponse = { data: PostType[]; }

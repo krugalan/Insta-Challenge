@@ -5,13 +5,14 @@ import { HeaderPost } from './HeaderPost';
 import { ThemedView } from '../ThemedView';
 import { ThemedText } from '../ThemedText';
 import { Image } from 'expo-image';
+import { ActionsPost } from './ActionsPost';
 
 interface PostProps {
     post: PostType;
 }
 
 export const Post: React.FC<PostProps> = ({ post }) => {
-    const { name, avatar, location, image, likes, comments, saved, description } = post;
+    const { name, avatar, location, image, likes, liked, comments, saved, description } = post;
     const headerPostData = { name, avatar, location };
 
     return (
@@ -20,11 +21,7 @@ export const Post: React.FC<PostProps> = ({ post }) => {
 
             <Image source={{ uri: image }} style={styles.image} />
 
-            <ThemedView style={styles.actions}>
-                <ThemedText>❤️ {likes}</ThemedText>
-                <ThemedText>💬 {comments}</ThemedText>
-                <ThemedText>{saved ? '💾 Guardado' : 'Guardar'}</ThemedText>
-            </ThemedView>
+            <ActionsPost saved={saved} liked={liked} />
 
             <ThemedText style={styles.description}>{description}</ThemedText>
 

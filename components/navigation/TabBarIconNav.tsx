@@ -18,13 +18,15 @@ type IconFamilyProps =
 type TabBarIconProps = IconFamilyProps & {
   color: string;
   style?: any;
+  onPress?: () => void
+  size?: number
 };
 
-export function TabBarIcon({ family, name, color, style }: TabBarIconProps) {
+export function TabBarIcon({ family, name, color, style, onPress, size = 28 }: TabBarIconProps) {
   const IconComponent =
     family === 'Ionicons' ? Ionicons
       : family === 'Foundation' ? Foundation
         : family === 'FontAwesome' ? FontAwesome : Octicons;
 
-  return <IconComponent name={name as any} size={28} color={color} style={[{ marginBottom: -3 }, style]} />;
+  return <IconComponent onPress={onPress} name={name as any} size={size} color={color} style={[{ marginBottom: -3 }, style]} />;
 }
