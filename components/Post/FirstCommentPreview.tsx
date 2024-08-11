@@ -25,11 +25,11 @@ export const FirstCommentPreview = ({ name, userFirstComment, userCompleteFirstC
 
                 {userFirstComment.length > LENGTH_FIRST_COMMENT && !expanded ? (
                     <Pressable style={styles.seeMoreContainer} onPress={toggleExpanded}>
-                        <Text style={styles.seeMore}>...Ver más</Text>
+                        <ThemedText style={styles.seeMore}> ...Ver más</ThemedText>
                     </Pressable>
                 ) :
                     <Pressable style={styles.seeMoreContainer} onPress={toggleExpanded}>
-                        <Text style={styles.seeMore}>...Ver menos</Text>
+                        <ThemedText style={styles.seeMore}>  ...Ver menos</ThemedText>
                     </Pressable>}
             </ThemedText>
         </View>
@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
     container: { flexDirection: 'row', flexWrap: 'wrap', alignItems: 'flex-end' },
     text: { fontSize: 14 },
     userName: { fontWeight: 'bold' },
-    seeMoreContainer: { bottom: 0, marginTop: 8, paddingTop: 8, justifyContent: 'flex-end', alignSelf: 'flex-end' },
-    seeMore: { fontSize: 14, bottom: 0, marginTop: 8 }
+    seeMoreContainer: { justifyContent: 'flex-end', alignSelf: 'flex-end' },
+    seeMore: { fontSize: 14, lineHeight: 18, paddingTop: 5, marginTop: 5, top: 5 }
 });
